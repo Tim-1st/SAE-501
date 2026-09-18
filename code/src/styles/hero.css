@@ -1,0 +1,157 @@
+@import 'tailwindcss';
+
+.bulle {
+    position: relative;
+    margin-top: 4.75rem;
+    margin-bottom: 3rem;
+
+    @media (width >= theme(--breakpoint-md)) {
+        margin-bottom: 6rem;
+    }
+
+    &:hover .bulle-icone-bordure {
+        translate: -30px 4px;
+        transform: scale(0.7);
+        @media (width >= theme(--breakpoint-sm)) {
+            transform: scale(1);
+        }
+    }
+
+    &:hover .bulle-icone {
+        translate: 5px -6px;
+        transform: scale(0.7);
+        @media (width >= theme(--breakpoint-sm)) {
+            transform: scale(1);
+        }
+    }
+
+    .titre {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        text-align: left;
+
+        @media (width >= theme(--breakpoint-sm)) {
+            text-align: right;
+        }
+    }
+
+    .txt-grand {
+        font-size: 2.375rem;
+        color: var(--color-slate-900);
+
+        @media (width >= theme(--breakpoint-sm)) {
+            font-size: 3.375rem;
+        }
+    }
+
+    .txt-grand span,
+    .txt-petit span {
+        display: inline-block;
+        background-color: var(--color-white);
+        padding: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .txt-petit {
+        color: var(--color-slate-900);
+        font-size: 1.65rem;
+
+        @media (width >= theme(--breakpoint-md)) {
+            font-size: 2.125rem;
+        }
+    }
+}
+
+.bulle-icone {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    width: 384px;
+    height: 350px;
+    mask: url("/images/bulle.svg") no-repeat center / contain;
+    transform: scale(0.7);
+    translate: 0 0;
+    top: -87px;
+    transition: transform 0.3s, translate 0.3s, opacity 0.2s;
+    opacity: 1;
+
+    @media (width >= theme(--breakpoint-sm)) {
+        right: 283px;
+        top: -46px;
+        transform: scale(1);
+    }
+
+    .bulle & {
+        @starting-style {
+            opacity: 0.1;
+            translate: 5px -6px;
+        }
+    }
+
+    &.rose {
+        background-color: var(--bubble-pink);
+    }
+
+    &.rouge {
+        background-color: var(--bubble-red);
+    }
+
+    &.vert {
+        background-color: var(--bubble-blue-green);
+    }
+
+    &.orange {
+        background-color: var(--bubble-orange);
+    }
+
+    &.bleu {
+        background-color: var(--bubble-blue);
+    }
+}
+
+.bulle-icone-bordure {
+    position: absolute;
+    transform: scale(0.7);
+    top: -101px;
+    right: 0;
+    z-index: calc(var(--z-base) - 1);
+    width: 484px;
+    height: 360px;
+    mask: url("/images/bulle-bordure.svg") no-repeat center / contain;
+    transition: transform 0.3s, translate 0.3s, opacity 0.2s;
+    opacity: 1;
+    translate: 0 0;
+
+    .bulle & {
+        @starting-style {
+            translate: -30px 4px;
+            opacity: 0.1;
+        }
+    }
+
+    @media (width >= theme(--breakpoint-sm)) {
+        right: 241px;
+        top: -60px;
+        transform: scale(1);
+    }
+
+    &.rose {
+        background-color: oklch(from var(--bubble-pink) calc(l * .55) c h);
+    }
+
+    &.rouge {
+        background-color: oklch(from var(--bubble-red) calc(l * .55) c h);
+    }
+
+    &.vert {
+        background-color: oklch(from var(--bubble-blue-green) calc(l * .55) c h);
+    }
+
+    &.orange {
+        background-color: oklch(from var(--bubble-orange) calc(l * .55) c h);
+    }
+
+    &.bleu {
+        background-color: oklch(from var(--bubble-blue) calc(l * .55) c h);
+    }
+}
