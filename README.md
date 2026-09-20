@@ -492,7 +492,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
   - Il faudra utiliser une variable nunjucks
   - Des classes ont déjà été définies dans le fichier `src/styles/hero.css`, libre à vous de les utiliser
   - Note : Une fonctionnalité semblable est déjà présente dans la partie admin, inspirez-vous en
-- [ ] Afficher la liste des articles **actifs** sur la page d'accueil
+- [X] Afficher la liste des articles **actifs** sur la page d'accueil
   - Pour rappel, vous avez déjà le code pour, les articles sont déjà injectés dans la page d'accueil (`src/pages/front-end/index.njk`), il faut juste les afficher
 - [ ] Mettre en place un système de pagination pour les articles sur la page d'accueil
 - [ ] **Sans javascript**, afficher une barre de progression sur les articles au fur et à mesure de la lecture grâce à la propriété CSS [animation-timeline](https://developer.mozilla.org/fr/docs/Web/CSS/animation-timeline)
