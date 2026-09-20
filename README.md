@@ -448,7 +448,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 - [ ] Rendre le site responsive (tailwind est là pour vous aider)
   - Il n'y a pas de maquette responsive, à vous de vous adapter. Utilisez votre expérience ainsi ce que vous avez vu cours pour proposer la meilleure expérience possible
   - [Accéder à la documentation des modifiers responsive de tailwindcss](https://tailwindcss.com/docs/responsive-design)
-- [ ] Mettre un favicon
+- [X] Mettre un favicon
   - Il n'a pas besoin d'être géré par vite, mettez-le dans le dossier /public
   - Il peut être différent entre le site BUT et l'administration
 - [ ] Respecter les normes d'accessibilité web (font-size en rem, contrastes...)
@@ -456,7 +456,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
     - Il y a le modifier tailwind ":hocus" qui réunit les deux, il y a également un modifier tailwindcss "hocus:" qui remplit le même rôle. Il fonctionne également pour les groupes
 - [ ] Ajouter une validation côté client des formulaires
   - Vous pouvez utiliser un outil comme [zod.js](https://zod.dev/) (déjà installé, voir `code/database/models/author.js`)
-- [ ] Afficher le nom des membres de l'équipe (site BUT et/ou administration)
+- [X] Afficher le nom des membres de l'équipe (site BUT et/ou administration)
 - [ ] Chaque page à une valeur de &lt;title> unique
   - Si la valeur n'est pas présente, il est indiqué "TITRE MANQUANT" dans le navigateur
   - Il y a un bloc nunjucks `{% block title %}{% endblock %}` dédié dans les gabarits de base du dossier `layouts/`. Utilisez-le
