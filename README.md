@@ -457,7 +457,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 - [ ] Ajouter une validation côté client des formulaires
   - Vous pouvez utiliser un outil comme [zod.js](https://zod.dev/) (déjà installé, voir `code/database/models/author.js`)
 - [X] Afficher le nom des membres de l'équipe (site BUT et/ou administration)
-- [ ] Chaque page à une valeur de &lt;title> unique
+- [X] Chaque page à une valeur de &lt;title> unique
   - Si la valeur n'est pas présente, il est indiqué "TITRE MANQUANT" dans le navigateur
   - Il y a un bloc nunjucks `{% block title %}{% endblock %}` dédié dans les gabarits de base du dossier `layouts/`. Utilisez-le
 
