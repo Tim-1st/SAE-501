@@ -43,4 +43,9 @@ router.get("/a-propos(.html)?", routeName("about"), async (_req, res) => {
     });
 });
 
+// route détail article
+router.get("/article/:slug", routeName("article"), async (_req, res) => {
+    res.render("pages/front-end/article.njk");
+});
+
 export default router;
