@@ -488,7 +488,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
   - Note 2 : N'oubliez pas que YouTube propose également des shorts, on doit également pouvoir les utiliser
 - [ ] Permettre, de façon asynchrone, d'ajouter un commentaire à un article et l'afficher
   - Pour gérer les messages plus facilement, aidez-vous de la balise &lt;template>
-- [ ] Indiquer dans la navigation la page courante et changer la couleur de la bulle en fonction de la page
+- [X] Indiquer dans la navigation la page courante et changer la couleur de la bulle en fonction de la page
   - Il faudra utiliser une variable nunjucks
   - Des classes ont déjà été définies dans le fichier `src/styles/hero.css`, libre à vous de les utiliser
   - Note : Une fonctionnalité semblable est déjà présente dans la partie admin, inspirez-vous en
