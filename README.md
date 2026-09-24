@@ -442,7 +442,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 
 ### Site BUT et administration
 
-- [ ] Gérer l'erreur 404
+- [X] Gérer l'erreur 404
   - Il existe moult didacticiels en ligne qui montrent comment gérer ceci avec express. Attention : votre route de 404 doit être la dernière route de l'ensemble de **toutes** vos routes, sinon, celles qui suivront ne seront jamais appelées
   - [Liste inspiration design pages 404](https://www.designspells.com/?tag=404)
 - [ ] Rendre le site responsive (tailwind est là pour vous aider)
