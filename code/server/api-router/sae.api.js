@@ -212,7 +212,7 @@ router.post(`/${base}`, routeName("sae_api"), upload.single("image"), async (req
             ressource: req.body,
         });
     }
-    
+
     try {
         const payloadValidated = SaeZodSchema.parse({
             ...req.body,
