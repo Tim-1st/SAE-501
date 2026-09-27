@@ -284,14 +284,22 @@ if (process.env.NODE_ENV === "development") {
     });
 }
 
+// 404 page
+app.use((req, res) => {
+    res.status(404).render("pages/404.njk");
+});
+
+
 app.use(async (err, req, res, _next) => {
     res.status(500);
     const response = {
-        ...(process.env.NODE_ENV === "development" ? {
-            error: err,
-            statusCode: res.statusCode,
-            sourceCode: null,
-        } : {}),
+        ...(process.env.NODE_ENV === "development"
+            ? {
+                    error: err,
+                    statusCode: res.statusCode,
+                    sourceCode: null,
+                }
+            : {}),
     };
 
     if (process.env.NODE_ENV === "development") {

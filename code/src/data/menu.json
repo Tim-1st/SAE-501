@@ -2,23 +2,28 @@
     "menu": [
         {
             "name": "ACCUEIL",
-            "link": "/"
+            "link": "/",
+            "key": "home"
         },
         {
             "name": "A PROPOS",
-            "link": "/a-propos.html"
+            "link": "/a-propos.html",
+            "key": "about"
         },
         {
             "name": "LIEUX DE VIE",
-            "link": "/lieux.html"
+            "link": "/lieux.html",
+            "key": "location"
         },
         {
             "name": "SUR LES MÉDIAS",
-            "link": "/sur-les-medias.html"
+            "link": "/sur-les-medias.html",
+            "key": "media"
         },
         {
             "name": "CONTACT",
-            "link": "/contact.html"
+            "link": "/contact.html",
+            "key": "contact"
         }
     ]
 }

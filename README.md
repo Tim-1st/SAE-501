@@ -442,7 +442,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 
 ### Site BUT et administration
 
-- [ ] Gérer l'erreur 404
+- [X] Gérer l'erreur 404
   - Il existe moult didacticiels en ligne qui montrent comment gérer ceci avec express. Attention : votre route de 404 doit être la dernière route de l'ensemble de **toutes** vos routes, sinon, celles qui suivront ne seront jamais appelées
   - [Liste inspiration design pages 404](https://www.designspells.com/?tag=404)
 - [ ] Rendre le site responsive (tailwind est là pour vous aider)
@@ -488,7 +488,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
   - Note 2 : N'oubliez pas que YouTube propose également des shorts, on doit également pouvoir les utiliser
 - [ ] Permettre, de façon asynchrone, d'ajouter un commentaire à un article et l'afficher
   - Pour gérer les messages plus facilement, aidez-vous de la balise &lt;template>
-- [ ] Indiquer dans la navigation la page courante et changer la couleur de la bulle en fonction de la page
+- [X] Indiquer dans la navigation la page courante et changer la couleur de la bulle en fonction de la page
   - Il faudra utiliser une variable nunjucks
   - Des classes ont déjà été définies dans le fichier `src/styles/hero.css`, libre à vous de les utiliser
   - Note : Une fonctionnalité semblable est déjà présente dans la partie admin, inspirez-vous en

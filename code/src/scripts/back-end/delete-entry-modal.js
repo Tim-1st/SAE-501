@@ -20,7 +20,7 @@ modal.addEventListener("toggle", (e) => {
     if (e.newState === "open") {
         displayDeleteItemModal(e);
     }
-})
+});
 
 delegateEventHandler(modal, "click", "[data-delete-item]", async (e) => {
     if (!modal.open || e.currentTarget.dataset.modal !== tplId) {

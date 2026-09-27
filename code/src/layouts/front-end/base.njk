@@ -1,4 +1,11 @@
-{% set bubble_color = "rouge" %}
+{% set bubbles = {
+    "home": "rouge",
+    "about": "bleu",
+    "location": "vert",
+    "media": "orange",
+    "contact": "rose"
+} %}
+{% set bubble_color = bubbles[page] or "rouge" %}
 
 <!DOCTYPE html>
 <html lang="fr" class="bg-neutral-50 text-slate-900">
