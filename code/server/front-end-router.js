@@ -44,8 +44,15 @@ router.get("/a-propos(.html)?", routeName("about"), async (_req, res) => {
 });
 
 // route détail article
-router.get("/article/:slug", routeName("article"), async (_req, res) => {
-    res.render("pages/front-end/article.njk");
+router.get("/", routeName("homepage"), async (req, res) => {
+    const queryParams = new URLSearchParams(req.query).toString();
+    let list_articles = {};
+    try {
+        const response = await fetch(`${res.locals.base_url}/api/articles?${queryParams}&is_active=true`);
+        list_articles = await response.json();
+    } catch (_error) {}
+
+    res.render("pages/front-end/index.njk", { list_articles });
 });
 
 export default router;
