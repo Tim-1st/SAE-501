@@ -1,12 +1,11 @@
-{% set current_path = (current_url | replace(base_url, "")) or "/" %}
 {% set bubbles = {
-    "/": "rouge",
-    "/a-propos.html": "bleu",
-    "/lieux.html": "vert",
-    "/sur-les-medias.html": "orange",
-    "/contact.html": "rose"
+    "home": "rouge",
+    "about": "bleu",
+    "location": "vert",
+    "media": "orange",
+    "contact": "rose"
 } %}
-{% set bubble_color = bubbles[current_path] %}
+{% set bubble_color = bubbles[page] or "rouge" %}
 
 <!DOCTYPE html>
 <html lang="fr" class="bg-neutral-50 text-slate-900">
