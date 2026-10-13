@@ -1,4 +1,4 @@
-# SAE 501 - Développer pour le web ou Concevoir un dispositif interactif
+# SAE 501 - Développer pour le web ou Concevoir un dispositif interactif - 
 
 _Les consignes pourront être modifiées._
 
