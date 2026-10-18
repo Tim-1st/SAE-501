@@ -1,0 +1,32 @@
+{% extends "layouts/front-end/base.njk" %}
+{% set page = "media" %}
+
+{% block title %}Sur les médias{% endblock %}
+
+{% block main %}
+    <section class="mb-8 mt-10">
+        <h1 class="font-bold text-3xl leading-tight md:text-4xl lg:text-[50px] lg:leading-[58px] text-black max-w-3xl">Les actualités et les évènements importants du BUT et de l'IUT CY Paris Université dans les médias</h1>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div class="flex flex-col gap-2">
+            <h2 class="text-xl md:text-2xl text-[#4F4F4F]">La nouvelle réforme : le BUT MMI</h2>
+            <iframe class="w-full aspect-video rounded-lg" src="https://www.youtube.com/embed/oiEbQF7qfBU" title="La nouvelle réforme : le BUT MMI" loading="lazy" allowfullscreen></iframe>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <h2 class="text-xl md:text-2xl text-[#4F4F4F]">Pourquoi étudier à l'IUT CYU ?</h2>
+            <iframe class="w-full aspect-video rounded-lg" src="https://www.youtube.com/embed/SyjF4h2Zb7Q" title="Pourquoi étudier à l'IUT CYU ?" loading="lazy" allowfullscreen></iframe>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <h2 class="text-xl md:text-2xl text-[#4F4F4F]">Job interview en anglais au département MMI</h2>
+            <iframe class="w-full aspect-video rounded-lg" src="https://www.youtube.com/embed/t72pdxpNjyc" title="Job interview en anglais au département MMI" loading="lazy" allowfullscreen></iframe>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <h2 class="text-xl md:text-2xl text-[#4F4F4F]">L'importance de l'IUT dans les études supérieures</h2>
+            <iframe class="w-full aspect-video rounded-lg" src="https://www.youtube.com/embed/xD4wshE0hEg" title="L'importance de l'IUT dans les études supérieures" loading="lazy" allowfullscreen></iframe>
+        </div>
+    </section>
+{% endblock %}
