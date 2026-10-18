@@ -43,6 +43,11 @@ router.get("/a-propos(.html)?", routeName("about"), async (_req, res) => {
     });
 });
 
+// route sur les médias
+router.get("/sur-les-medias(.html)?", routeName("media"), async (_req, res) => {
+    res.render("pages/front-end/media.njk");
+});
+
 // route lieux de vie
 router.get("/lieux(.html)?", routeName("location"), async (_req, res) => {
     res.render("pages/front-end/location.njk");
