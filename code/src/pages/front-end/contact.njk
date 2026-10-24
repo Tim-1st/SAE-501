@@ -1,0 +1,64 @@
+{% extends "layouts/front-end/base.njk" %}
+{% set page = "contact" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block main %}
+<section class="flex flex-col gap-2 mb-4 mt-10">
+    <h1 class="text-4xl font-bold">Plus d'infos sur la formation ? Contactez-nous !</h1>
+    <p class="leading-relaxed">
+        <strong>La formation s'ouvre à tous les bacheliers</strong>, pour rappel. Avoir des connaissances en
+        programmation, design ou encore audiovisuel n'est pas obligatoire mais reste un bon atout, car il faut aimer la
+        curiosité dans cette formation pluridisciplinaire.
+        <strong>Il est également possible de faire la formation après une reprise d'études ou une réorientation.</strong>
+    </p>
+</section>
+
+<section class="flex flex-col gap-6 mb-12 mt-10">
+    <h2 class="text-3xl font-bold">Nous contacter en ligne</h2>
+
+    <form class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+            <label for="firstname" class="font-bold">Prénom</label>
+            <input type="text" id="firstname" name="firstname" class="border border-gray-500 rounded-lg p-3">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="lastname" class="font-bold">Nom de famille</label>
+            <input type="text" id="lastname" name="lastname" class="border border-gray-500 rounded-lg p-3">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="email" class="font-bold">Adresse e-mail</label>
+            <input type="email" id="email" name="email" class="border border-gray-500 rounded-lg p-3">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="content" class="font-bold">Message</label>
+            <textarea id="content" name="content" rows="8" class="border border-gray-500 rounded-lg p-3"></textarea>
+        </div>
+
+        <fieldset>
+            <legend class="font-bold mb-2">Je suis</legend>
+            <div class="flex flex-col md:flex-row gap-3 md:gap-8">
+                <label><input type="radio" name="type" value="non-precise"> Je ne souhaite pas le préciser</label>
+                <label><input type="radio" name="type" value="etudiant"> Étudiant / Étudiante</label>
+                <label><input type="radio" name="type" value="parent"> Parent</label>
+                <label><input type="radio" name="type" value="autre"> Autre</label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="bg-blue-600 text-white font-bold uppercase py-4 rounded-lg hocus:bg-blue-800">Envoyer</button>
+    </form>
+</section>
+
+<section class="flex flex-col gap-2 mb-10">
+    <h2 class="text-3xl font-bold">Nous contacter par courrier</h2>
+    <address class="not-italic leading-relaxed">
+        IUT de Cergy-Pontoise,<br>
+        Département Métiers du Multimédia et de l’Internet (MMI)<br>
+        34 Bis Boulevard Henri Bergson<br>
+        95200 Sarcelles
+    </address>
+</section>
+{% endblock %}

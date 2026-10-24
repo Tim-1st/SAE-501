@@ -53,6 +53,11 @@ router.get("/lieux(.html)?", routeName("location"), async (_req, res) => {
     res.render("pages/front-end/location.njk");
 });
 
+// route contact
+router.get("/contact(.html)?", routeName("contact"), async (_req, res) => {
+    res.render("pages/front-end/contact.njk");
+});
+
 // route détail article
 router.get("/article/:slug", routeName("article"), async (_req, res) => {
     res.render("pages/front-end/article.njk");
