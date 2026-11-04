@@ -507,7 +507,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 
 ### Administration
 
-- [ ] Gérer la date des journées portes ouvertes (affichée dans la page d'accueil du site BUT) depuis le backoffice qui lira/modifiera un fichier json
+- [X] Gérer la date des journées portes ouvertes (affichée dans la page d'accueil du site BUT) depuis le backoffice qui lira/modifiera un fichier json
   - Le fichier n'existe pas, vous devez le créer dans le dossier src/data pour que son contenu puisse être lu dans les templates
   - La documentation de Nodejs propose des exemples pour lire/éditer un fichier json (préférez la version avec async / await) :
     - [Lire un fichier](https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs)
