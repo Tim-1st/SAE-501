@@ -463,7 +463,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 
 ### Site BUT
 
-- [ ] Compléter l'intégration à partir de la maquette Adobe XD
+- [X] Compléter l'intégration à partir de la maquette Adobe XD
   - [Accéder à la maquette Adobe XD](https://xd.adobe.com/view/95c93a87-3bd9-475d-8adf-6d6937baace9-c09a/)
   - Vous devez utiliser nunjucks, un gabarit de base (`src/layouts/front-end/base.njk`) est là pour vous aider
   - La page "a-propos" est déjà faite. **Pas besoin de la modifier**
