@@ -40,16 +40,27 @@ router.get("/", routeName("admin"), async (req, res) => {
     const queryParamsArticles = new URLSearchParams({ per_page: NB_ITEMS_PER_PAGE });
     const articlesResponse = await fetch(`${res.locals.base_url}/api/articles?${queryParamsArticles.toString()}`);
     const articlesData = await articlesResponse.json();
-    
-    if (saesResponse.ok && articlesResponse.ok) {
-        listSaes = saesData;
-        listArticles = articlesData;
-    }
 
-    res.render("pages/back-end/index.njk", {
-        list_saes: listSaes,
-        list_articles: listArticles,
-    });
+    let listMessages = [];
+    const messagesResponse = await fetch(`${res.locals.base_url}/api/messages`);
+    const messagesData = await messagesResponse.json();
+    
+if (saesResponse.ok) {
+    listSaes = saesData;
+}
+
+if (articlesResponse.ok) {
+    listArticles = articlesData;
+}
+
+if (messagesResponse.ok) {
+    listMessages = messagesData;
+}
+res.render("pages/back-end/index.njk", {
+    list_saes: listSaes,
+    list_articles: listArticles,
+    list_messages: listMessages,
+});
 });
 
 export default router;
