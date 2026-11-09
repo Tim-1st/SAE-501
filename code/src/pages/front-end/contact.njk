@@ -17,7 +17,8 @@
 <section class="flex flex-col gap-6 mb-12 mt-10">
     <h2 class="text-3xl font-bold">Nous contacter en ligne</h2>
 
-    <form class="flex flex-col gap-6">
+    <form id="contact-form" class="flex flex-col gap-6" novalidate>
+
         <div class="flex flex-col gap-2">
             <label for="firstname" class="font-bold">Prénom</label>
             <input type="text" id="firstname" name="firstname" class="border border-gray-500 rounded-lg p-3">
@@ -34,19 +35,22 @@
         </div>
 
         <div class="flex flex-col gap-2">
-            <label for="content" class="font-bold">Message</label>
-            <textarea id="content" name="content" rows="8" class="border border-gray-500 rounded-lg p-3"></textarea>
+            <label for="message" class="font-bold">Message</label>
+            <textarea id="message" name="message" rows="8" class="border border-gray-500 rounded-lg p-3"></textarea>
         </div>
 
         <fieldset>
             <legend class="font-bold mb-2">Je suis</legend>
             <div class="flex flex-col md:flex-row gap-3 md:gap-8">
-                <label><input type="radio" name="type" value="non-precise"> Je ne souhaite pas le préciser</label>
-                <label><input type="radio" name="type" value="etudiant"> Étudiant / Étudiante</label>
-                <label><input type="radio" name="type" value="parent"> Parent</label>
-                <label><input type="radio" name="type" value="autre"> Autre</label>
+                <label><input type="radio" name="identity" value="none" checked> Je ne souhaite pas le préciser</label>
+                <label><input type="radio" name="identity" value="student"> Étudiant / Étudiante</label>
+                <label><input type="radio" name="identity" value="parent"> Parent</label>
+                <label><input type="radio" name="identity" value="other"> Autre</label>
             </div>
         </fieldset>
+
+        <p id="contact-form-error" role="alert" class="bg-red-100 text-red-800 p-3 rounded-lg whitespace-pre-line" hidden></p>
+        <p id="contact-form-success" role="status" class="bg-green-100 text-green-800 p-3 rounded-lg" hidden>Votre message a bien été envoyé.</p>
 
         <button type="submit" class="bg-blue-600 text-white font-bold uppercase py-4 rounded-lg hocus:bg-blue-800">Envoyer</button>
     </form>
