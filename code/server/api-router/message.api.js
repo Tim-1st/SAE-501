@@ -9,6 +9,22 @@ import { mapZodErrors } from "#database/error-messages.js";
 const router = express.Router();
 const base = "messages";
 
+router.get(`/${base}`, async (req, res) => {
+    try {
+        const listMessages = await Message.find()
+            .sort({ created_at: -1 })
+            .limit(5);
+
+        return res.status(200).json(listMessages);
+    }      catch (error) {
+        console.error("Erreur récupération messages :", error);
+
+        return res.status(400).json({
+            list_errors: ["Impossible de récupérer les messages"],
+        });
+    }
+});
+
 router.post(`/${base}`, routeName("message_api"), async (req, res) => {
     let listErrors = [];
 
