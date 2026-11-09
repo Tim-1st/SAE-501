@@ -95,6 +95,53 @@
                 Liste messages
             </h2>
         </header>
-        <p>A compléter</p>
+        <table class="w-full bg-white rounded-lg overflow-hidden border-collapse">
+    <thead>
+        <tr class="text-slate-800">
+            <th class="font-bold px-6 py-3 text-left border-b border-slate-200">Expéditeur</th>
+            <th class="font-bold px-6 py-3 text-left border-b border-slate-200">E-mail</th>
+            <th class="font-bold px-6 py-3 text-left border-b border-slate-200">Message</th>
+            <th class="font-bold px-6 py-3 text-left border-b border-slate-200">Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for item in list_messages %}
+            <tr class="hover:bg-neutral-50 even:bg-blue-50">
+                <td class="py-4 px-6 border-b border-slate-200">
+                    {{ item.firstname }} {{ item.lastname }}
+                </td>
+
+                <td class="py-4 px-6 border-b border-slate-200">
+                    <a href="mailto:{{ item.email }}" class="text-blue-700 hover:text-blue-900">
+                        {{ item.email }}
+                    </a>
+                </td>
+
+                <td class="py-4 px-6 border-b border-slate-200">
+                    <p class="line-clamp-2" title="{{ item.message }}">
+                        {{ item.message }}
+                    </p>
+                </td>
+
+                <td class="py-4 px-6 border-b border-slate-200">
+                    {% if item.created_at %}
+                        <time datetime="{{ item.created_at }}">
+                            {{ item.created_at|date("dd/LL/yyyy à HH:mm") }}
+                        </time>
+                    {% else %}
+                        —
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" class="text-center py-4 px-6">
+                    Aucun message pour le moment
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
     </div>
 {% endblock %}
