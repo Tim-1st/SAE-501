@@ -478,7 +478,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
     // Pour y accéder depuis une balise <a>, il faudra mettre comme valeur "/formation" pour l'attribut "href", et ce, même si le fichier nunjucks s'appelle "training.njk"
     ```
 
-- [ ] Sur la page contact, vous devez gérer de façon asynchrone l'envoi du message depuis le formulaire
+- [X] Sur la page contact, vous devez gérer de façon asynchrone l'envoi du message depuis le formulaire
   - **La page ne doit pas se recharger lors de la soumission du formulaire**
   - Il faudra utiliser fetch, api native de javascript qui permet de faire des requêtes asynchrones
 - [ ] Afficher les détails d'un article quand on clique dessus depuis la page d'accueil
