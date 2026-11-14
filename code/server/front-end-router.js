@@ -1,5 +1,6 @@
 import express from "express";
 
+import { extractYoutubeId } from "#server/extract-youtube-id.js";
 import routeName from "#server/utils/name-route.middleware.js";
 import parseManifest from "#server/utils/parse-manifest.js";
 
@@ -21,14 +22,13 @@ router.use(async (_req, res, next) => {
 
 router.get("/", routeName("homepage"), async (req, res) => {
     const queryParams = new URLSearchParams(req.query).toString();
-    let result = {};
+    let list_articles = {};
     try {
-        result = await fetch(`${res.locals.base_url}/api/articles?${queryParams}&is_active=true`);
+        const response = await fetch(`${res.locals.base_url}/api/articles?${queryParams}&is_active=true`);
+        list_articles = await response.json();
     } catch (_error) {}
 
-    res.render("pages/front-end/index.njk", {
-        list_articles: result.data,
-    });
+    res.render("pages/front-end/index.njk", { list_articles });
 });
 
 // "(.html)?" makes ".html" optional in the url
@@ -43,16 +43,23 @@ router.get("/a-propos(.html)?", routeName("about"), async (_req, res) => {
     });
 });
 
-// route détail article
-router.get("/", routeName("homepage"), async (req, res) => {
-    const queryParams = new URLSearchParams(req.query).toString();
-    let list_articles = {};
+// Détail d'un article
+router.get("/articles/:id", routeName("article"), async (req, res, next) => {
+    let article = null;
     try {
-        const response = await fetch(`${res.locals.base_url}/api/articles?${queryParams}&is_active=true`);
-        list_articles = await response.json();
+        const response = await fetch(`${res.locals.base_url}/api/articles/${req.params.id}`);
+        article = await response.json();
     } catch (_error) {}
 
-    res.render("pages/front-end/index.njk", { list_articles });
+    // Article introuvable (id inconnu, erreur de l'API) : on passe à la route suivante (404)
+    if (!article?._id) {
+        return next();
+    }
+
+    res.render("pages/front-end/article.njk", {
+        article,
+        videoId: extractYoutubeId(article.yt_video_id),
+    });
 });
 
 export default router;
