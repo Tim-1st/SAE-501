@@ -16,7 +16,7 @@ router.get(`/${base}`, async (req, res) => {
             .limit(5);
 
         return res.status(200).json(listMessages);
-    }      catch (error) {
+    } catch (error) {
         console.error("Erreur récupération messages :", error);
 
         return res.status(400).json({
