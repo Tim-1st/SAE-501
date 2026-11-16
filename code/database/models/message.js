@@ -47,7 +47,7 @@ const messageSchema = new Schema({
         required: true,
         trim: true,
     },
-        identity: {
+    identity: {
         type: String,
         enum: ["none", "student", "parent", "other"],
         required: true

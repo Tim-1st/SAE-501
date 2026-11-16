@@ -45,22 +45,22 @@ router.get("/", routeName("admin"), async (req, res) => {
     const messagesResponse = await fetch(`${res.locals.base_url}/api/messages`);
     const messagesData = await messagesResponse.json();
     
-if (saesResponse.ok) {
-    listSaes = saesData;
-}
+    if (saesResponse.ok) {
+        listSaes = saesData;
+    }
 
-if (articlesResponse.ok) {
-    listArticles = articlesData;
-}
+    if (articlesResponse.ok) {
+        listArticles = articlesData;
+    }
 
-if (messagesResponse.ok) {
-    listMessages = messagesData;
-}
-res.render("pages/back-end/index.njk", {
-    list_saes: listSaes,
-    list_articles: listArticles,
-    list_messages: listMessages,
-});
+    if (messagesResponse.ok) {
+        listMessages = messagesData;
+    }
+    res.render("pages/back-end/index.njk", {
+        list_saes: listSaes,
+        list_articles: listArticles,
+        list_messages: listMessages,
+    });
 });
 
 export default router;

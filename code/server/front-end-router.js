@@ -60,6 +60,8 @@ router.get("/articles/:id", routeName("article"), async (req, res, next) => {
         article,
         videoId: extractYoutubeId(article.yt_video_id),
     });
+});
+
 // route sur les médias
 router.get("/sur-les-medias(.html)?", routeName("media"), async (_req, res) => {
     res.render("pages/front-end/media.njk");
