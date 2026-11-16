@@ -1,4 +1,4 @@
-# SAE 501 - Développer pour le web ou Concevoir un dispositif interactif
+# SAE 501 - Développer pour le web ou Concevoir un dispositif interactif - 
 
 _Les consignes pourront être modifiées._
 
@@ -478,7 +478,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
     // Pour y accéder depuis une balise <a>, il faudra mettre comme valeur "/formation" pour l'attribut "href", et ce, même si le fichier nunjucks s'appelle "training.njk"
     ```
 
-- [ ] Sur la page contact, vous devez gérer de façon asynchrone l'envoi du message depuis le formulaire
+- [X] Sur la page contact, vous devez gérer de façon asynchrone l'envoi du message depuis le formulaire
   - **La page ne doit pas se recharger lors de la soumission du formulaire**
   - Il faudra utiliser fetch, api native de javascript qui permet de faire des requêtes asynchrones
 - [ ] Afficher les détails d'un article quand on clique dessus depuis la page d'accueil
@@ -507,7 +507,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 
 ### Administration
 
-- [ ] Gérer la date des journées portes ouvertes (affichée dans la page d'accueil du site BUT) depuis le backoffice qui lira/modifiera un fichier json
+- [X] Gérer la date des journées portes ouvertes (affichée dans la page d'accueil du site BUT) depuis le backoffice qui lira/modifiera un fichier json
   - Le fichier n'existe pas, vous devez le créer dans le dossier src/data pour que son contenu puisse être lu dans les templates
   - La documentation de Nodejs propose des exemples pour lire/éditer un fichier json (préférez la version avec async / await) :
     - [Lire un fichier](https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs)

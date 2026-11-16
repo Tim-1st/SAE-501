@@ -60,6 +60,24 @@ router.get("/articles/:id", routeName("article"), async (req, res, next) => {
         article,
         videoId: extractYoutubeId(article.yt_video_id),
     });
+// route sur les médias
+router.get("/sur-les-medias(.html)?", routeName("media"), async (_req, res) => {
+    res.render("pages/front-end/media.njk");
+});
+
+// route lieux de vie
+router.get("/lieux(.html)?", routeName("location"), async (_req, res) => {
+    res.render("pages/front-end/location.njk");
+});
+
+// route contact
+router.get("/contact(.html)?", routeName("contact"), async (_req, res) => {
+    res.render("pages/front-end/contact.njk");
+});
+
+// route détail article
+router.get("/article/:slug", routeName("article"), async (_req, res) => {
+    res.render("pages/front-end/article.njk");
 });
 
 export default router;

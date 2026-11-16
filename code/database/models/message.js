@@ -47,11 +47,13 @@ const messageSchema = new Schema({
         required: true,
         trim: true,
     },
-    identity: {
+        identity: {
         type: String,
         enum: ["none", "student", "parent", "other"],
         required: true
     },
+}, {
+    timestamps: { createdAt: "created_at", updatedAt: false },
 });
 
 export default mongoose.model("Message", messageSchema);

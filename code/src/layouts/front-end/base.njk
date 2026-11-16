@@ -1,11 +1,11 @@
 {% set bubbles = {
-    "home": "rouge",
-    "about": "bleu",
-    "location": "vert",
-    "media": "orange",
-    "contact": "rose"
+    "home": "rose",
+    "about": "vert",
+    "location": "bleu",
+    "media": "rouge",
+    "contact": "orange"
 } %}
-{% set bubble_color = bubbles[page] or "rouge" %}
+{% set bubble_color = bubbles[page] or "rose" %}
 
 <!DOCTYPE html>
 <html lang="fr" class="bg-neutral-50 text-slate-900">
@@ -49,5 +49,8 @@
         <main class="max-w-[1200px] mx-auto @container/main">
             {% block main %}{% endblock %}
         </main>
+
+        {# intégration footer #}
+        {% include "components/front-end/footer.njk" %}
     </body>
 </html>
