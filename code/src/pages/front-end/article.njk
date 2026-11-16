@@ -1,0 +1,36 @@
+{% extends "layouts/front-end/base.njk" %}
+{% set page = "home" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block main %}
+    <article>
+        <h1 class="text-3xl font-bold my-4">{{ article.title }}</h1>
+
+        <p class="my-4 font-bold">{{ article.abstract | striptags(true) | escape | nl2br }}</p>
+
+        <div class="my-4 rounded-lg overflow-hidden text-center">
+            <img src="{{ '/images/default-sae-image.png' if article.image|length == 0 else '/uploads/' ~ article.image }}" alt="">
+        </div>
+
+        <p class="my-4">{{ article.content | striptags(true) | escape | nl2br }}</p>
+
+        {% if videoId %}
+            <iframe class="w-full aspect-video my-4 rounded-lg"
+                    src="https://www.youtube.com/embed/{{ videoId }}"
+                    title="Vidéo de l'article" loading="lazy" allowfullscreen></iframe>
+        {% endif %}
+
+        <p class="italic text-gray-600 my-4">
+            Par
+            {% if article.author %}
+                <a href="/auteurs/{{ article.author._id }}" class="text-[#005A47] hocus:text-black">{{ article.author.firstname }} {{ article.author.lastname }}</a>
+            {% else %}
+                l'équipe pédagogique
+            {% endif %}
+        </p>
+    </article>
+
+    {# Emplacement réservé à la Personne B : commentaires #}
+    <section id="commentaires"></section>
+{% endblock %}

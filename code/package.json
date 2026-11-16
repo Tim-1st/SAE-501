@@ -9,7 +9,8 @@
     "prod:docker": "node server/index.js",
     "build": "node ./vite.config.build.js",
     "lint": "npx eslint",
-    "lint:fix": "npx eslint --fix"
+    "lint:fix": "npx eslint --fix",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@babel/code-frame": "^7.26.2",
@@ -25,7 +26,8 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "tailwindcss": "^4.1.11",
-    "vite": "^8.0.8"
+    "vite": "^8.0.8",
+    "vitest": "^5.1.0"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
