@@ -434,10 +434,10 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 ## Tâches à effectuer
 
 - [x] Lire les consignes
-- [ ] [Télécharger le code de départ la SAE](https://github.com/DanYellow/cours/raw/refs/heads/main/s5-developpement-front/s5-developpement-front-sae-501.ressources.zip)
-- [ ] Installer les dépendances [(voir partie "mise en place")](#mise-en-place)
-- [ ] S'approprier le code, faire des tests comme ajouter de nouvelles routes et pages...
-- [ ] Initialiser le projet sur GitHub [(voir partie "utilisation de git")](#utilisation-de-git)
+- [x] [Télécharger le code de départ la SAE](https://github.com/DanYellow/cours/raw/refs/heads/main/s5-developpement-front/s5-developpement-front-sae-501.ressources.zip)
+- [x] Installer les dépendances [(voir partie "mise en place")](#mise-en-place)
+- [x] S'approprier le code, faire des tests comme ajouter de nouvelles routes et pages...
+- [x] Initialiser le projet sur GitHub [(voir partie "utilisation de git")](#utilisation-de-git)
 - [ ] **Ne pas modifier la page "a-propos", elle est complète et déjà responsive**
 
 ### Site BUT et administration
@@ -481,7 +481,7 @@ D'ailleurs, vous y trouverez quelques problèmes car ils ont été laissés volo
 - [X] Sur la page contact, vous devez gérer de façon asynchrone l'envoi du message depuis le formulaire
   - **La page ne doit pas se recharger lors de la soumission du formulaire**
   - Il faudra utiliser fetch, api native de javascript qui permet de faire des requêtes asynchrones
-- [ ] Afficher les détails d'un article quand on clique dessus depuis la page d'accueil
+- [x] Afficher les détails d'un article quand on clique dessus depuis la page d'accueil
   - titre, chapo, contenu, image, video YouTube
   - Afficher le nom de l'auteur (mettre une valeur par défaut si un article n'a pas d'auteur) avec un lien vers le détail de l'auteur listant tous ses articles
   - Note : Pour la vidéo YouTube, elle est facultative, toutefois vous devez permettre à l'utilisateur de mettre l'URL de la vidéo, l'url d'iframe ou juste l'id de la vidéo
